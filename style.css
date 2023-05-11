@@ -5,7 +5,7 @@
 
 body {
     background-color: hsl(216, 12%, 8%);
-    height: 150vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    background-color: blue;
+    background-color: hsl(213, 19%, 18%);
     max-width:390px ;
     display: flex;
     flex-direction: column;
@@ -33,18 +33,22 @@ h1 {
 
 p {
     color: hsl(217, 12%, 63%);
+    line-height: 1.5rem;
     
+}
+.rate-content{
+    display: flex;
 }
 
 .rating-numbers {
     display: flex;
     justify-content: space-around;
-    cursor: pointer;
+    
     
 }
 
-.rating-btn {
-    background-color: #19202A;
+.rating-btn, .rating-btn-star {
+    background-color: hsl(213, 13%, 28%);
     border-radius: 100%;
     width: 50px;
     height: 50px;
@@ -52,8 +56,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    color: hsl(217, 12%, 63%);
 }
-
+.rating-btn:hover {
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+    cursor: pointer;
+}
+.rating-btn:focus {
+    color: white;
+    background-color: hsl(25, 97%, 53%)
+    
+}
 .submit-btn {
     background-color: hsl(25, 97%, 53%);
     color: white;
@@ -63,9 +78,14 @@ p {
     border: none;
     border-radius: 50px;
     width: 90%;
-    margin: 0 auto;
-    letter-spacing: 2px;
+    margin: 0 auto 10px;
+    letter-spacing: 1.75px;
     cursor: pointer;
+    transition: 0.25s;
+}
+.submit-btn:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
 }
 
 
@@ -73,6 +93,7 @@ p {
 
 .thanks-content {
     text-align: center;
+    display: none;
 }
 
 .thanks-content img {
@@ -87,7 +108,7 @@ p {
 
 .rating-result {
     color: hsl(25, 97%, 53%);
-    background-color: #262F36;
+    background-color: hsl(212, 12%, 21%);
     width: 50%;
     text-align: center;
     margin: 0 auto;
