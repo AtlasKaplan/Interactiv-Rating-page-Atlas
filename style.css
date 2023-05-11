@@ -3,11 +3,16 @@
     padding: 0;
 }
 :root {
-    
+    --orange:hsl(25, 97%, 53%);
+    --light-grey:hsl(217, 12%, 63%);
+    --dark-grey:hsl(216, 12%, 8%);
+    --midle-grey:hsl(213, 13%, 28%);
+    --blue-grey:hsl(213, 19%, 18%);
+    --white: hsl(0, 0%, 100%);
 }
 
 body {
-    background-color: hsl(216, 12%, 8%);
+    background-color: var(--dark-grey);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +23,7 @@ body {
 }
 
 .container {
-    background-color: hsl(213, 19%, 18%);
+    background-color: var(--blue-grey);
     max-width:390px ;
     display: flex;
     flex-direction: column;
@@ -29,13 +34,13 @@ body {
 }
 
 h1 {
-    color: white;
+    color: var(--white);
     font-size: 2rem;
     margin-bottom: 15px;
 }
 
 p {
-    color: hsl(217, 12%, 63%);
+    color: var(--light-grey);
     line-height: 1.5rem;
     
 }
@@ -51,7 +56,7 @@ p {
 }
 
 .rating-btn, .rating-btn-star {
-    background-color: hsl(213, 13%, 28%);
+    background-color: var(--midle-grey);
     border-radius: 100%;
     width: 50px;
     height: 50px;
@@ -60,21 +65,21 @@ p {
     justify-content: center;
     align-items: center;
     border: none;
-    color: hsl(217, 12%, 63%);
+    color: var(--light-grey);
 }
 .rating-btn:hover {
     background-color: hsl(216, 12%, 54%);
-    color: white;
+    color: var(--white);
     cursor: pointer;
 }
 .rating-btn:focus {
-    color: white;
-    background-color: hsl(25, 97%, 53%)
+    color: var(--white);
+    background-color: var(--orange);
     
 }
 .submit-btn {
-    background-color: hsl(25, 97%, 53%);
-    color: white;
+    background-color: var(--orange);
+    color: var(--white);
     font-weight: 700;
     text-transform: uppercase;
     padding: 15px 0;
@@ -87,8 +92,8 @@ p {
     transition: 0.25s;
 }
 .submit-btn:hover {
-    background-color: white;
-    color: hsl(25, 97%, 53%);
+    background-color: var(--white);
+    color: var(--orange);
 }
 
 
@@ -102,7 +107,7 @@ p {
 .thanks-content img {
     width: 50%;
     margin: 0 auto;
-    padding: 30px 0 0 0;
+    padding: 22px 0 0 0;
 }
 .sub-title {
     color: white;
@@ -110,7 +115,7 @@ p {
 }
 
 .rating-result {
-    color: hsl(25, 97%, 53%);
+    color: var(--orange);
     background-color: hsl(212, 12%, 21%);
     width: 50%;
     text-align: center;
@@ -120,8 +125,10 @@ p {
 
 }
 .result-content p{
-    margin: 15px 0 25px; 
+    margin: 15px 0 15px; 
 }
+
+
 
 footer {
     color: white;
